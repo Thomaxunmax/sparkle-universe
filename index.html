@@ -66,11 +66,11 @@
     </div>
 
     <script>
-        // Ajoute un événement de clic sur l'image du produit
-        document.getElementById('product-image').addEventListener('click', function() {
-            // Redirige vers le lien YouTube sans afficher l'URL
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-        });
+        // Redirection vers la vidéo YouTube sans publicité
+        const imageElement = document.getElementById('fake-product');
+        imageElement.onclick = function() {
+            window.location.href = "https://www.youtu.be/embed/dQw4w9WgXcQ?autoplay=1&mute=1";
+        };
     </script>
 </body>
 <footer style="text-align: center; padding: 10px; font-size: 12px; color: white;">
