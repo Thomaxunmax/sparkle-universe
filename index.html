@@ -21,7 +21,7 @@
             color: #fff;
             margin-top: 50px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px #fff;
+            text-shadow: 0 0 5px #fff;
         }
         .product {
             margin: 50px auto;
@@ -34,6 +34,12 @@
             border-radius: 8px;
             cursor: pointer;
         }
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
         .product h2 {
             font-size: 24px;
             font-weight: normal;
@@ -42,7 +48,6 @@
         }
         .price {
             font-size: 20px;
-            margin-top: 10px;
             color: #fff;
         }
     </style>
@@ -50,14 +55,23 @@
 <body>
     <h1>SPARKLE UNIVERSE</h1>
     <div class="product">
-        <!-- Image du faux produit avec lien vers le Rickroll -->
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <img src="troll_image_fini_premier_t-shirt_SU.png" alt="T-shirt ORIGINE">
-        </a>
-        <h2>ORIGINE</h2>
-        <p class="price">€15</p>
+        <!-- Image du faux produit avec interception du clic via JavaScript -->
+        <img src="troll_image_fini_premier_t-shirt_SU.png" alt="T-shirt ORIGINE" id="product-image">
+        <div class="product-info">
+            <h2>ORIGINE</h2>
+            <p class="price">€15</p>
+        </div>
     </div>
+
+    <script>
+        // Ajoute un événement de clic sur l'image du produit
+        document.getElementById('product-image').addEventListener('click', function() {
+            // Redirige vers le lien YouTube sans afficher l'URL
+            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        });
+    </script>
 </body>
 </html>
+
 
 
